@@ -1,0 +1,16 @@
+[
+  {
+    "modid": "biwako_mod",
+    "name": "Biwako_mod",
+    "description": "琵琶湖は滋賀県にあります",
+    "version": "${version}",
+    "mcversion": "${mcversion}",
+    "url": "",
+    "updateUrl": "",
+    "authorList": [],
+    "credits": "",
+    "logoFile": "",
+    "screenshots": [],
+    "dependencies": []
+  }
+]

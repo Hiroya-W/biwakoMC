@@ -1,0 +1,16 @@
+[
+  {
+    "modid": "biwako_mod",
+    "name": "Biwako_mod",
+    "description": "injection point type '%s'",
+    "version": "1.0.1",
+    "mcversion": "1.12.2",
+    "url": "",
+    "updateUrl": "",
+    "authorList": [],
+    "credits": "",
+    "logoFile": "",
+    "screenshots": [],
+    "dependencies": []
+  }
+]
