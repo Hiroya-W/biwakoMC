@@ -1,16 +1,16 @@
 [
   {
     "modid": "biwako_mod",
-    "name": "Biwako_mod",
-    "description": "injection point type '%s'",
+    "name": "Biwako Mod",
+    "description": "Biwako is the largest lake in Japan.",
     "version": "1.0.1",
     "mcversion": "1.12.2",
-    "url": "",
+    "url": "https://github.com/Hiroya-W/biwakoMC",
     "updateUrl": "",
-    "authorList": [],
+    "authorList": ["Hiroya_W"],
     "credits": "",
-    "logoFile": "",
+    "logoFile": "assets/biwako_mod/logo.png",
     "screenshots": [],
-    "dependencies": []
+    "dependencies": ["mod_MinecraftForge"]
   }
 ]

@@ -1,16 +1,16 @@
 [
   {
     "modid": "biwako_mod",
-    "name": "Biwako_mod",
-    "description": "琵琶湖は滋賀県にあります",
+    "name": "Biwako Mod",
+    "description": "Biwako is the largest lake in Japan.",
     "version": "${version}",
     "mcversion": "${mcversion}",
-    "url": "",
+    "url": "https://github.com/Hiroya-W/biwakoMC",
     "updateUrl": "",
-    "authorList": [],
+    "authorList": ["Hiroya_W"],
     "credits": "",
-    "logoFile": "",
+    "logoFile": "assets/biwako_mod/logo.png",
     "screenshots": [],
-    "dependencies": []
+    "dependencies": ["mod_MinecraftForge"]
   }
 ]
