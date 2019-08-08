@@ -74,7 +74,8 @@ public class Biwako_mod {
                 new Item()
                         .setRegistryName(MOD_ID,"biwakowater")
                         .setCreativeTab(CreativeTabs.MATERIALS)
-                        .setTranslationKey("biwakowater"),
+                        .setTranslationKey("biwakowater")
+                        .setContainerItem(Item.getByNameOrId("bucket")),
                 new AddSword(EnumHelper.addToolMaterial("BIWAKOWATER_MATERIAL",1,1000,5,7,1))
                         .setRegistryName(MOD_ID,"biwakosword")
                         .setTranslationKey("biwakosword")

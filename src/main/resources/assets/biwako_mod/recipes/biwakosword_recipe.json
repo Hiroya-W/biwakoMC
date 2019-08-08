@@ -1,0 +1,27 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        "W",
+        "W",
+        "S"
+    ],
+    "key": {
+        "W": [
+            {
+                "item": "biwako_mod:biwakowater",
+                "data": 0
+            }
+        ],
+        "S": [
+            {
+                "item": "minecraft:stick",
+                "data": 0
+            }
+        ]
+    },
+    "result": {
+        "item": "biwako_mod:biwakosword",
+        "data": 0,
+        "count": 1
+    }
+}
