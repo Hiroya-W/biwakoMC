@@ -4,9 +4,9 @@ import net.minecraft.block.Block;
 import net.minecraft.client.renderer.block.model.ModelResourceLocation;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.item.Item;
-import net.minecraft.item.ItemSword;
 import net.minecraftforge.client.event.ModelRegistryEvent;
 import net.minecraftforge.client.model.ModelLoader;
+import net.minecraftforge.common.util.EnumHelper;
 import net.minecraftforge.event.RegistryEvent;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
@@ -74,7 +74,10 @@ public class Biwako_mod {
                 new Item()
                         .setRegistryName(MOD_ID,"biwakowater")
                         .setCreativeTab(CreativeTabs.MATERIALS)
-                        .setTranslationKey("biwakowater")
+                        .setTranslationKey("biwakowater"),
+                new AddSword(EnumHelper.addToolMaterial("BIWAKOWATER_MATERIAL",1,1000,5,7,1))
+                        .setRegistryName(MOD_ID,"biwakosword")
+                        .setTranslationKey("biwakosword")
             );
         }
 
@@ -90,6 +93,7 @@ public class Biwako_mod {
         public static void registerModels(ModelRegistryEvent event) {
             ModelLoader.setCustomModelResourceLocation(Items.biwakoBurger, 0, new ModelResourceLocation(Items.biwakoBurger.getRegistryName(), "inventory"));
             ModelLoader.setCustomModelResourceLocation(Items.biwakoWater, 0, new ModelResourceLocation(Items.biwakoWater.getRegistryName(), "inventory"));
+            ModelLoader.setCustomModelResourceLocation(Items.biwakoSword, 0, new ModelResourceLocation(Items.biwakoSword.getRegistryName(), "inventory"));
         }
     }
 
