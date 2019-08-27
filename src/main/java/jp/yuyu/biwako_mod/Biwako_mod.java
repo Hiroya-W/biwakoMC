@@ -58,15 +58,15 @@ public class Biwako_mod {
     public static class Items {
         public static final Item biwakoBurger = null;       /** 琵琶湖バーガー */
         public static final Item biwakoWater = null;        /** 琵琶湖の水 */
-        public static final Item biwakoBlock = null;
+        public static final Item biwakoBlock = null;        /** 琵琶湖ブロック */
         public static final Item biwakoSword = null;        /** 琵琶湖ソード , 滋賀剣*/
     }
 
-    /**
-     * アイテム登録用イベント
-     */
     @Mod.EventBusSubscriber
     public static class ObjectRegistryHandler {
+        /**
+         * アイテム登録用イベント
+         */
         @SubscribeEvent
         public static void addItems(RegistryEvent.Register<Item> event) {
             event.getRegistry().registerAll(
@@ -82,10 +82,13 @@ public class Biwako_mod {
                 new AddSword(EnumHelper.addToolMaterial("BIWAKOWATER_MATERIAL",1,1000,5,7,1))
                         .setRegistryName(MOD_ID,"biwakosword")
                         .setTranslationKey("biwakosword"),
-                new ItemBlock(Blocks.biwakoBlock).setRegistryName("biwakoblock")
+                new ItemBlock(Blocks.biwakoBlock).setRegistryName(MOD_ID,"biwakoblock")
             );
         }
 
+        /**
+         * ブロック登録用イベント
+         */
         @SubscribeEvent
         public static void addBlocks(RegistryEvent.Register<Block> event) {
             event.getRegistry().registerAll(
