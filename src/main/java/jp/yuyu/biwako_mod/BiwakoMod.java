@@ -1,7 +1,11 @@
 package jp.yuyu.biwako_mod;
 
+import jp.yuyu.biwako_mod.lists.BlockList;
 import jp.yuyu.biwako_mod.lists.ItemList;
 import net.minecraft.block.Block;
+import net.minecraft.block.SoundType;
+import net.minecraft.block.material.Material;
+import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemGroup;
 import net.minecraft.util.ResourceLocation;
@@ -43,13 +47,22 @@ public class BiwakoMod {
             LOGGER.info("HELLO from Register Item");
             itemRegistryEvent.getRegistry().registerAll(
                     ItemList.BiwakoIngot = new Item(new Item.Properties().group(ItemGroup.MISC))
-                            .setRegistryName(new ResourceLocation(MOD_ID, "biwako_ingot"))
+                            .setRegistryName(new ResourceLocation(MOD_ID, "biwako_ingot")),
+                    ItemList.BiwakoBlock = new BlockItem(BlockList.BiwakoBlock, new Item.Properties().group(ItemGroup.MISC))
+                            .setRegistryName(BlockList.BiwakoBlock.getRegistryName())
             );
-       }
+        }
 
         @SubscribeEvent
         public static void onBlocksRegistry(final RegistryEvent.Register<Block> blockRegistryEvent) {
             LOGGER.info("HELLO from Register Block");
+            blockRegistryEvent.getRegistry().registerAll(
+                    BlockList.BiwakoBlock = new Block(Block.Properties.create(Material.IRON)
+                            .hardnessAndResistance(2.0f, 3.0f)
+                            .lightValue(5)
+                            .sound(SoundType.METAL))
+                            .setRegistryName(new ResourceLocation(MOD_ID, "biwako_block"))
+            );
         }
     }
 }

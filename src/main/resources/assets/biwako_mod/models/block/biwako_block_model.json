@@ -1,0 +1,4 @@
+{
+    "parent":"block/cube_all",
+    "textures":{"all":"biwako_mod:blocks/biwako_block"}
+}
