@@ -1,6 +1,10 @@
 package jp.yuyu.biwako_mod;
 
+import jp.yuyu.biwako_mod.lists.ItemList;
 import net.minecraft.block.Block;
+import net.minecraft.item.Item;
+import net.minecraft.item.ItemGroup;
+import net.minecraft.util.ResourceLocation;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.event.RegistryEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
@@ -12,42 +16,39 @@ import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
 
-// The value here should match an entry in the META-INF/mods.toml file
 @Mod(BiwakoMod.MOD_ID)
-public class BiwakoMod
-{
+public class BiwakoMod {
     public static final String MOD_ID = "biwako_mod";
 
-    // Directly reference a log4j logger.
-    private static final Logger LOGGER = LogManager.getLogger();
+    private static final Logger LOGGER = LogManager.getLogger(MOD_ID);
 
     public BiwakoMod() {
-        // Register the setup method for modloading
         FMLJavaModLoadingContext.get().getModEventBus().addListener(this::setup);
-        // Register the doClientStuff method for modloading
         FMLJavaModLoadingContext.get().getModEventBus().addListener(this::doClientStuff);
-        // Register ourselves for server and other game events we are interested in
         MinecraftForge.EVENT_BUS.register(this);
     }
 
-    private void setup(final FMLCommonSetupEvent event)
-    {
-        // some preinit code
+    private void setup(final FMLCommonSetupEvent event) {
         LOGGER.info("HELLO FROM PREINIT");
     }
 
     private void doClientStuff(final FMLClientSetupEvent event) {
-        // do something that can only be done on the client
         LOGGER.info("HELLO FROM Client Setup");
     }
 
-    // You can use EventBusSubscriber to automatically subscribe events on the contained class (this is subscribing to the MOD
-    // Event bus for receiving Registry Events)
-    @Mod.EventBusSubscriber(bus=Mod.EventBusSubscriber.Bus.MOD)
+    @Mod.EventBusSubscriber(bus = Mod.EventBusSubscriber.Bus.MOD)
     public static class RegistryEvents {
         @SubscribeEvent
+        public static void onItemsRegistry(final RegistryEvent.Register<Item> itemRegistryEvent) {
+            LOGGER.info("HELLO from Register Item");
+            itemRegistryEvent.getRegistry().registerAll(
+                    ItemList.BiwakoIngot = new Item(new Item.Properties().group(ItemGroup.MISC))
+                            .setRegistryName(new ResourceLocation(MOD_ID, "biwako_ingot"))
+            );
+       }
+
+        @SubscribeEvent
         public static void onBlocksRegistry(final RegistryEvent.Register<Block> blockRegistryEvent) {
-            // register a new block here
             LOGGER.info("HELLO from Register Block");
         }
     }
