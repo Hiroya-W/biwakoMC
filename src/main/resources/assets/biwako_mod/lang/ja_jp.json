@@ -1,4 +1,5 @@
 {
     "item.biwako_mod.biwako_ingot": "琵ンゴット",
-    "block.biwako_mod.biwako_block": "琵ロック"
+    "block.biwako_mod.biwako_block": "琵ロック",
+    "itemGroup.BiwakoItemGroup" : "琵琶湖 MOD"
 }

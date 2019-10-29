@@ -26,6 +26,8 @@ public class BiwakoMod {
 
     private static final Logger LOGGER = LogManager.getLogger(MOD_ID);
 
+    public static final ItemGroup ItemGroup_Biwako = new BiwakoItemGroup();
+
     public BiwakoMod() {
         FMLJavaModLoadingContext.get().getModEventBus().addListener(this::setup);
         FMLJavaModLoadingContext.get().getModEventBus().addListener(this::doClientStuff);
@@ -46,9 +48,9 @@ public class BiwakoMod {
         public static void onItemsRegistry(final RegistryEvent.Register<Item> itemRegistryEvent) {
             LOGGER.info("HELLO from Register Item");
             itemRegistryEvent.getRegistry().registerAll(
-                    ItemList.BiwakoIngot = new Item(new Item.Properties().group(ItemGroup.MISC))
+                    ItemList.BiwakoIngot = new Item(new Item.Properties().group(ItemGroup_Biwako))
                             .setRegistryName(new ResourceLocation(MOD_ID, "biwako_ingot")),
-                    ItemList.BiwakoBlock = new BlockItem(BlockList.BiwakoBlock, new Item.Properties().group(ItemGroup.MISC))
+                    ItemList.BiwakoBlock = new BlockItem(BlockList.BiwakoBlock, new Item.Properties().group(ItemGroup_Biwako))
                             .setRegistryName(BlockList.BiwakoBlock.getRegistryName())
             );
         }
