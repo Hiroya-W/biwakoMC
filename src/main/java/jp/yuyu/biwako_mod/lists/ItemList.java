@@ -5,4 +5,9 @@ import net.minecraft.item.Item;
 public class ItemList {
     public static Item BiwakoIngot;
     public static Item BiwakoBlock;
+    public static Item BiwakoAxe;
+    public static Item BiwakoHoe;
+    public static Item BiwakoPickel;
+    public static Item BiwakoShovel;
+    public static Item BiwakoSword;
 }
