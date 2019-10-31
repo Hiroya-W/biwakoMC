@@ -1,5 +1,10 @@
 {
     "item.biwako_mod.biwako_ingot": "琵ンゴット",
     "block.biwako_mod.biwako_block": "琵ロック",
-    "itemGroup.BiwakoItemGroup" : "琵琶湖 MOD"
+    "itemGroup.BiwakoItemGroup" : "琵琶湖 MOD",
+    "item.biwako_mod.biwako_axe": "琵琶湖の斧",
+    "item.biwako_mod.biwako_hoe": "琵琶湖のクワ",
+    "item.biwako_mod.biwako_pickaxe": "琵琶湖のピッケル",
+    "item.biwako_mod.biwako_shovel": "琵琶湖のスコップ",
+    "item.biwako_mod.biwako_sword": "琵琶湖の剣"
 }
