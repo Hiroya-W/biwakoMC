@@ -8,17 +8,15 @@ import net.minecraft.item.crafting.Ingredient;
 import net.minecraft.util.ResourceLocation;
 import net.minecraft.util.SoundEvent;
 
-import java.util.function.Supplier;
-
 public enum ArmorMaterialList implements IArmorMaterial {
-    ;
+    MATERIAL_BIWAKO(BiwakoMod.MOD_ID + ":MATERIAL_BIWAKO",35,new int[] {3,6,8,3},25,"block.waterlily.place",3.0f, ItemList.BiwakoIngot);
 
     private static final int[] MAX_DAMAGE_ARRAY = new int[]{13, 15, 16, 11};
     private final String name;
     private final int maxDamageFactor;
     private final int[] damageReductionAmountArray;
     private final int enchantability;
-    private final String soundEvent;
+    private final String equipSound;
     private final float toughness;
     private final Item repairMaterial;
 
@@ -27,11 +25,10 @@ public enum ArmorMaterialList implements IArmorMaterial {
         this.maxDamageFactor = maxDamageFactorIn;
         this.damageReductionAmountArray = damageReductionAmountsIn;
         this.enchantability = enchantabilityIn;
-        this.soundEvent = equipSoundIn;
+        this.equipSound = equipSoundIn;
         this.toughness = toughnessIn;
         this.repairMaterial = repairMaterialIn;
     }
-
 
     @Override
     public int getDurability(EquipmentSlotType slotIn) {
@@ -50,7 +47,7 @@ public enum ArmorMaterialList implements IArmorMaterial {
 
     @Override
     public SoundEvent getSoundEvent() {
-        return new SoundEvent(new ResourceLocation(soundEvent));
+        return new SoundEvent(new ResourceLocation(equipSound));
     }
 
     @Override
@@ -67,6 +64,4 @@ public enum ArmorMaterialList implements IArmorMaterial {
     public float getToughness() {
         return this.toughness;
     }
-
-
 }
