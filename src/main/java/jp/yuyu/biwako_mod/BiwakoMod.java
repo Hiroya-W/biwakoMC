@@ -8,7 +8,6 @@ import jp.yuyu.biwako_mod.lists.ToolMaterialList;
 import net.minecraft.block.Block;
 import net.minecraft.block.SoundType;
 import net.minecraft.block.material.Material;
-import net.minecraft.client.renderer.entity.layers.ArmorLayer;
 import net.minecraft.inventory.EquipmentSlotType;
 import net.minecraft.item.*;
 import net.minecraft.util.ResourceLocation;
@@ -51,13 +50,13 @@ public class BiwakoMod {
         public static void onItemsRegistry(final RegistryEvent.Register<Item> itemRegistryEvent) {
             LOGGER.info("HELLO from Register Item");
             itemRegistryEvent.getRegistry().registerAll(
-                    // アイテム
+                    // Items
                     ItemList.BiwakoIngot = new Item(new Item.Properties().group(ItemGroup_Biwako))
                             .setRegistryName(new ResourceLocation(MOD_ID, "biwako_ingot")),
-                    // ブロック
+                    // Blocks
                     ItemList.BiwakoBlock = new BlockItem(BlockList.BiwakoBlock, new Item.Properties().group(ItemGroup_Biwako))
                             .setRegistryName(BlockList.BiwakoBlock.getRegistryName()),
-                    // ツール
+                    // Tools
                     ItemList.BiwakoAxe = new ItemCustomAxe(ToolMaterialList.MATERIAL_BIWAKO, 5.0f, -3.0f, new Item.Properties().group(ItemGroup_Biwako))
                             .setRegistryName(new ResourceLocation(MOD_ID, "biwako_axe")),
                     ItemList.BiwakoHoe = new ItemCustomHoe(ToolMaterialList.MATERIAL_BIWAKO, 0.0f, new Item.Properties().group(ItemGroup_Biwako))
@@ -68,7 +67,7 @@ public class BiwakoMod {
                             .setRegistryName(new ResourceLocation(MOD_ID, "biwako_shovel")),
                     ItemList.BiwakoSword = new ItemCustomSword(ToolMaterialList.MATERIAL_BIWAKO, 3, -2.4f, new Item.Properties().group(ItemGroup_Biwako))
                             .setRegistryName(new ResourceLocation(MOD_ID, "biwako_sword")),
-                    // アーマー
+                    // Armors
                     ItemList.BiwakoHelmet = new ArmorItem(ArmorMaterialList.MATERIAL_BIWAKO, EquipmentSlotType.HEAD, new Item.Properties().group(ItemGroup_Biwako))
                             .setRegistryName(new ResourceLocation(MOD_ID, "biwako_helmet")),
                     ItemList.BiwakoChestplate = new ArmorItem(ArmorMaterialList.MATERIAL_BIWAKO, EquipmentSlotType.CHEST, new Item.Properties().group(ItemGroup_Biwako))

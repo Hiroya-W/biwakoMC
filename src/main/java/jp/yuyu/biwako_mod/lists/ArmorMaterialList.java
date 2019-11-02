@@ -5,27 +5,27 @@ import net.minecraft.inventory.EquipmentSlotType;
 import net.minecraft.item.IArmorMaterial;
 import net.minecraft.item.Item;
 import net.minecraft.item.crafting.Ingredient;
-import net.minecraft.util.ResourceLocation;
 import net.minecraft.util.SoundEvent;
+import net.minecraft.util.SoundEvents;
 
 public enum ArmorMaterialList implements IArmorMaterial {
-    MATERIAL_BIWAKO(BiwakoMod.MOD_ID + ":MATERIAL_BIWAKO",35,new int[] {3,6,8,3},25,"block.waterlily.place",3.0f, ItemList.BiwakoIngot);
+    MATERIAL_BIWAKO("biwako",35,new int[] {3,6,8,3},25, SoundEvents.ITEM_BUCKET_FILL,3.0f, ItemList.BiwakoIngot);
 
     private static final int[] MAX_DAMAGE_ARRAY = new int[]{13, 15, 16, 11};
     private final String name;
     private final int maxDamageFactor;
     private final int[] damageReductionAmountArray;
     private final int enchantability;
-    private final String equipSound;
+    private final SoundEvent soundEvent;
     private final float toughness;
     private final Item repairMaterial;
 
-    private ArmorMaterialList(String nameIn, int maxDamageFactorIn, int[] damageReductionAmountsIn, int enchantabilityIn, String equipSoundIn, float toughnessIn, Item repairMaterialIn) {
+    private ArmorMaterialList(String nameIn, int maxDamageFactorIn, int[] damageReductionAmountsIn, int enchantabilityIn, SoundEvent soundEventIn, float toughnessIn, Item repairMaterialIn) {
         this.name = nameIn;
         this.maxDamageFactor = maxDamageFactorIn;
         this.damageReductionAmountArray = damageReductionAmountsIn;
         this.enchantability = enchantabilityIn;
-        this.equipSound = equipSoundIn;
+        this.soundEvent = soundEventIn;
         this.toughness = toughnessIn;
         this.repairMaterial = repairMaterialIn;
     }
@@ -47,7 +47,7 @@ public enum ArmorMaterialList implements IArmorMaterial {
 
     @Override
     public SoundEvent getSoundEvent() {
-        return new SoundEvent(new ResourceLocation(equipSound));
+        return this.soundEvent;
     }
 
     @Override
