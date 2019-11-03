@@ -56,6 +56,8 @@ public class BiwakoMod {
                     // Blocks
                     ItemList.BiwakoBlock = new BlockItem(BlockList.BiwakoBlock, new Item.Properties().group(ItemGroup_Biwako))
                             .setRegistryName(BlockList.BiwakoBlock.getRegistryName()),
+                    ItemList.BiwakoOre = new BlockItem(BlockList.BiwakoOre, new Item.Properties().group(ItemGroup_Biwako))
+                            .setRegistryName(BlockList.BiwakoOre.getRegistryName()),
                     // Tools
                     ItemList.BiwakoAxe = new ItemCustomAxe(ToolMaterialList.MATERIAL_BIWAKO, 5.0f, -3.0f, new Item.Properties().group(ItemGroup_Biwako))
                             .setRegistryName(new ResourceLocation(MOD_ID, "biwako_axe")),
@@ -87,7 +89,10 @@ public class BiwakoMod {
                             .hardnessAndResistance(2.0f, 3.0f)
                             .lightValue(5)
                             .sound(SoundType.METAL))
-                            .setRegistryName(new ResourceLocation(MOD_ID, "biwako_block"))
+                            .setRegistryName(new ResourceLocation(MOD_ID, "biwako_block")),
+                    BlockList.BiwakoOre = new Block(Block.Properties.create(Material.ROCK)
+                            .hardnessAndResistance(3.0f, 3.0f))
+                            .setRegistryName(new ResourceLocation(MOD_ID, "biwako_ore"))
             );
         }
     }
