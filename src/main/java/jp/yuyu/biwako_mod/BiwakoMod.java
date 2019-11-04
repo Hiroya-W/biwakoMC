@@ -8,6 +8,7 @@ import jp.yuyu.biwako_mod.lists.ToolMaterialList;
 import net.minecraft.block.Block;
 import net.minecraft.block.SoundType;
 import net.minecraft.block.material.Material;
+import net.minecraft.block.material.MaterialColor;
 import net.minecraft.inventory.EquipmentSlotType;
 import net.minecraft.item.*;
 import net.minecraft.util.ResourceLocation;
@@ -58,6 +59,8 @@ public class BiwakoMod {
                             .setRegistryName(BlockList.BiwakoBlock.getRegistryName()),
                     ItemList.BiwakoOre = new BlockItem(BlockList.BiwakoOre, new Item.Properties().group(ItemGroup_Biwako))
                             .setRegistryName(BlockList.BiwakoOre.getRegistryName()),
+                    ItemList.BiwakoQuartzOre = new BlockItem(BlockList.BiwakoQuartzOre, new Item.Properties().group(ItemGroup_Biwako))
+                            .setRegistryName(BlockList.BiwakoQuartzOre.getRegistryName()),
                     // Tools
                     ItemList.BiwakoAxe = new ItemCustomAxe(ToolMaterialList.MATERIAL_BIWAKO, 5.0f, -3.0f, new Item.Properties().group(ItemGroup_Biwako))
                             .setRegistryName(new ResourceLocation(MOD_ID, "biwako_axe")),
@@ -92,7 +95,10 @@ public class BiwakoMod {
                             .setRegistryName(new ResourceLocation(MOD_ID, "biwako_block")),
                     BlockList.BiwakoOre = new Block(Block.Properties.create(Material.ROCK)
                             .hardnessAndResistance(3.0f, 3.0f))
-                            .setRegistryName(new ResourceLocation(MOD_ID, "biwako_ore"))
+                            .setRegistryName(new ResourceLocation(MOD_ID, "biwako_ore")),
+                    BlockList.BiwakoQuartzOre = new Block(Block.Properties.create(Material.ROCK, MaterialColor.NETHERRACK)
+                            .hardnessAndResistance(3.0f, 3.0f))
+                            .setRegistryName(new ResourceLocation(MOD_ID, "biwako_quartz_ore"))
             );
         }
     }

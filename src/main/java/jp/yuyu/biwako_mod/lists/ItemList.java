@@ -7,6 +7,7 @@ public class ItemList {
 
     public static Item BiwakoBlock;
     public static Item BiwakoOre;
+    public static Item BiwakoQuartzOre;
 
     public static Item BiwakoAxe;
     public static Item BiwakoHoe;
