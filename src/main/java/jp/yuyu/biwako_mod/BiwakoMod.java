@@ -5,6 +5,7 @@ import jp.yuyu.biwako_mod.lists.ArmorMaterialList;
 import jp.yuyu.biwako_mod.lists.BlockList;
 import jp.yuyu.biwako_mod.lists.ItemList;
 import jp.yuyu.biwako_mod.lists.ToolMaterialList;
+import jp.yuyu.biwako_mod.world.OreGeneration;
 import net.minecraft.block.Block;
 import net.minecraft.block.SoundType;
 import net.minecraft.block.material.Material;
@@ -27,7 +28,7 @@ import org.apache.logging.log4j.Logger;
 public class BiwakoMod {
     public static final String MOD_ID = "biwako_mod";
 
-    private static final Logger LOGGER = LogManager.getLogger(MOD_ID);
+    public static final Logger LOGGER = LogManager.getLogger(MOD_ID);
 
     public static final ItemGroup ItemGroup_Biwako = new BiwakoItemGroup();
 
@@ -38,6 +39,7 @@ public class BiwakoMod {
     }
 
     private void setup(final FMLCommonSetupEvent event) {
+        OreGeneration.setupOreGeneration();
         LOGGER.info("HELLO FROM PREINIT");
     }
 
