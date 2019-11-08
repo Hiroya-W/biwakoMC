@@ -1,0 +1,19 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        "II",
+        "IS",
+        " S"
+    ],
+    "key": {
+        "I": {
+            "item": "biwako_mod:biwako_ingot"
+        },
+        "S": {
+            "item": "minecraft:stick"
+        }
+    },
+    "result": {
+        "item": "biwako_mod:biwako_axe"
+    }
+}
