@@ -17,6 +17,6 @@ public class ItemList {
 
     public static Item BiwakoHelmet;
     public static Item BiwakoChestplate;
-    public static Item Biwakoleggings;
-    public static Item Biwakoboots;
+    public static Item BiwakoLeggings;
+    public static Item BiwakoBoots;
 }

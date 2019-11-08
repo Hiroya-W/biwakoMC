@@ -79,9 +79,9 @@ public class BiwakoMod {
                             .setRegistryName(new ResourceLocation(MOD_ID, "biwako_helmet")),
                     ItemList.BiwakoChestplate = new ArmorItem(ArmorMaterialList.MATERIAL_BIWAKO, EquipmentSlotType.CHEST, new Item.Properties().group(ItemGroup_Biwako))
                             .setRegistryName(new ResourceLocation(MOD_ID, "biwako_chestplate")),
-                    ItemList.Biwakoleggings = new ArmorItem(ArmorMaterialList.MATERIAL_BIWAKO, EquipmentSlotType.LEGS, new Item.Properties().group(ItemGroup_Biwako))
+                    ItemList.BiwakoLeggings = new ArmorItem(ArmorMaterialList.MATERIAL_BIWAKO, EquipmentSlotType.LEGS, new Item.Properties().group(ItemGroup_Biwako))
                             .setRegistryName(new ResourceLocation(MOD_ID, "biwako_leggings")),
-                    ItemList.Biwakoboots = new ArmorItem(ArmorMaterialList.MATERIAL_BIWAKO, EquipmentSlotType.FEET, new Item.Properties().group(ItemGroup_Biwako))
+                    ItemList.BiwakoBoots = new ArmorItem(ArmorMaterialList.MATERIAL_BIWAKO, EquipmentSlotType.FEET, new Item.Properties().group(ItemGroup_Biwako))
                             .setRegistryName(new ResourceLocation(MOD_ID, "biwako_boots"))
             );
         }
