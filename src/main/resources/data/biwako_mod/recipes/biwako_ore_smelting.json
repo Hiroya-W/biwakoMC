@@ -1,0 +1,9 @@
+{
+    "type": "minecraft:smelting",
+    "ingredient": {
+        "item": "biwako_mod:biwako_ore"
+    },
+    "result": {
+        "item": "biwako_mod:biwako_ingot"
+    }
+}
