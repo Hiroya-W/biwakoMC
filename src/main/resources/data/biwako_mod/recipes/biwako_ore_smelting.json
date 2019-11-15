@@ -1,10 +1,16 @@
 {
     "type": "minecraft:smelting",
-    "ingredient": {
-        "item": "biwako_mod:biwako_ore"
-    },
+    "ingredient": [
+        {
+            "item": "biwako_mod:biwako_ore"
+        },
+        {
+            "item": "biwako_mod:biwako_quartz_ore"
+        }
+    ],
     "result": {
         "item": "biwako_mod:biwako_ingot"
     },
-    "experience": 3.0
+    "experience": 3.0,
+    "cookingtime": 200
 }
